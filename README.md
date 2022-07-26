@@ -1,11 +1,11 @@
 
 # Simple Web-App for IKS Demo
 
-This Webserver based on NGINX that serves a simple page containing its hostname, IP address and port as well as the requested URI and the local time of the webserver.
+This app is a simple, small containerized NGINX webserver that serves a simple page containing pod IP, service_port, pod_name as, date/time and URI.
 
-Created for various Intersight Kubernetes Service demos
+Created for various Intersight Kubernetes Service demos.
 
-### Steps
+## Steps
 
 1. Create the deployment. This will create one pod which will get an IP from the POD IP CIDR
 
