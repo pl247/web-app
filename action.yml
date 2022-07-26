@@ -1,0 +1,16 @@
+# action.yml
+name: 'pl247 action'
+description: 'Build and publish container image to ghcr.io'
+inputs:
+  environment:  # id of input
+    description: 'Application Environment'
+    required: true
+    default: 'Production'
+outputs:
+  time: # id of output
+    description: 'Current time'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.environment }}
