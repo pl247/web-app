@@ -9,7 +9,9 @@ Created for various Intersight Kubernetes Service demos
 
 1. Create the deployment. This will create one pod which will get an IP from the POD IP CIDR
 
-```kubectl create deployment acme --image=ghcr.io/pl247/web-app:latest --port=8888```
+```
+kubectl create deployment acme --image=ghcr.io/pl247/web-app:latest --port=8888
+```
 
 2. Create the service to expose the deployment
 
