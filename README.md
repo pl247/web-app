@@ -1,11 +1,11 @@
 
-# Simple Web-App for IKS Demo
+# Simple Web-App for an Intersight Kubernetes Service Demo
 
 This app is a simple, small containerized NGINX webserver that serves a simple page containing pod IP, service_port, pod_name as, date/time and URI.
 
 Created for various Intersight Kubernetes Service demos.
 
-## Steps
+## Steps to run this Web-App on Kubernetes
 
 1. Create the deployment. This will create one pod which will get an IP from the POD IP CIDR
 
@@ -13,7 +13,7 @@ Created for various Intersight Kubernetes Service demos.
 kubectl create deployment acme --image=ghcr.io/pl247/web-app:latest --port=8888
 ```
 
-2. Create the service to expose the deployment
+2. Create the service to expose the deployment on port 80
 
 ```
 kubectl expose deployment acme --type=ClusterIP --port 80
@@ -38,7 +38,7 @@ spec:
               servicePort: 80
 ```
 
-Then apply the changes to the ingress:
+Then apply the changes to the ingress pointing /acme to the acme service:
 
 ```
 kubectl apply -f acme-ingress.yaml
@@ -90,4 +90,12 @@ Get/describe the ingress
 `kubectl get ingress`
 
 `kubectl describe ingress`
+
+
+## Notes
+
+The creation of this container app is fully automated using the GitHub Actions CI/CD pipeline that completely automates the build of the container as well as the publishing of it on the GitHub Container Registry at ```
+ghcr.io/pl247/webapp:latest
+```
+
 
