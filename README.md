@@ -94,7 +94,8 @@ Get/describe the ingress
 
 ## Notes
 
-The creation of this container app is fully automated using the GitHub Actions CI/CD pipeline that completely automates the build of the container as well as the publishing of it on the GitHub Container Registry at ```
+The creation of this container app is fully automated using the GitHub Actions CI/CD pipeline that completely automates the build of the container as well as the publishing of it on the GitHub Container Registry at 
+```
 ghcr.io/pl247/webapp:latest
 ```
 
