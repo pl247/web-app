@@ -1,5 +1,5 @@
 
-# Simple Web-App for an Intersight Kubernetes Service Demo
+# Simple Web-App Container for Kubernetes Demo
 
 This app is a simple, small containerized NGINX webserver that serves a simple page containing pod IP, service_port, pod_name as, date/time and URI.
 
